@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://saudsblog.com"
+base_url = "https://frenchfries2905.github.io/Blog-Page/"
 
 title = "Saud's blogs"
 description = "My thoughts on interesting topics or just explaining them"
@@ -19,7 +19,7 @@ highlight_code = true
 [extra]
 
 footer_links = [
-    {url = "$BASE_URL/about", name = "About"},
+    {url = "https://frenchfries2905.github.io/Blog-Page/about", name = "About"},
     {url = "https://github.com/FrenchFries2905", name = "GitHub"},
     {url = "https://x.com/mkwdcs", name = "Twitter"},
 ]
