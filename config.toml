@@ -1,8 +1,8 @@
 # The URL the site will be built for
 base_url = "https://frenchfries2905.github.io/Blog-Page/"
 
-title = "Saud's blogs"
-description = "My thoughts on interesting topics or just explaining them"
+title = "Praetorium Cogitationum"
+description = "My thoughts on numerous discrete topics"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
