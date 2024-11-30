@@ -29,9 +29,13 @@ td {
 	padding: 10px;
 }
 img {
-	height: auto;
-	max-width: 100%;
+        height: auto;
+        max-width: 100%;
+        width: 50%; 
+        display: block; 
+        margin: 1rem auto; 
 }
+
 .homepage-list {
 	list-style: none;
 	padding: 1rem 0;
