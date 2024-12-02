@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-Allow: /
-Sitemap: https://frenchfries2905.github.io/Blog-Page/sitemap.xml
