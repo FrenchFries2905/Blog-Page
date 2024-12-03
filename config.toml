@@ -3,6 +3,7 @@ base_url = "https://frenchfries2905.github.io/Blog-Page/"
 
 title = "Praetorium Cogitationum"
 description = "My thoughts on numerous discrete topics"
+theme="lightspeed"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
