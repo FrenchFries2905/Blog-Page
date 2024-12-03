@@ -25,9 +25,9 @@ So should similar ethnic groups be rooted off their traditions and cultures pass
 
 Here are the links:
 
-[](https://youtu.be/HDICfd_tRXA?si=tqbriKhSVNEiWGly)
+[https://youtu.be/HDICfd_tRXA?si=tqbriKhSVNEiWGly](https://youtu.be/HDICfd_tRXA?si=tqbriKhSVNEiWGly)
 
-[](https://youtu.be/cGTeP0r3xs8?si=VsBMPnQ591LkT37Z)
+[https://youtu.be/cGTeP0r3xs8?si=VsBMPnQ591LkT37Z](https://youtu.be/cGTeP0r3xs8?si=VsBMPnQ591LkT37Z)
 
 
 
