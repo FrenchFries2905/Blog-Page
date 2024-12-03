@@ -1,6 +1,6 @@
 +++
 title="Nenets of the Tundra"
-date="2024-12-03"
+date="2024-12-03 20:25:00"
 +++
 ![A Nenet speaks about his lifestyle](/Blog-Page/nenet6.jpg)
 
