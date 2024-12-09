@@ -1,7 +1,7 @@
 +++
 title= "Belisarius: Fortune's Favor"
 date="2024-12-02"
-extra.image= "/Blog-Page/Belisarius_mosaic.jpg"
+extra.image= ["/Blog-Page/Belisarius_mosaic.jpg"]
 +++
 
 For most of the 4th century, the Sassanids and the Eastern Roman Empire shared wary co-existence due to the presence of a common enemy on the north, the Huns. However this wouldn't last very long, in 525, the Christian Iberian state in the Caucasus, a vassal of the Sassanids, asks the Romans for aid when the Persian king tried to impose Zoroastrian rituals on the country. The Romans sent military aid which lead to the conflict between the Sassanids and the Romans to escalate. The Romans were building a fort at the border city of Minduos during the conflict when the were raided by the Sassanids and the building works destroyed and men slaughtered, however one of the generals that managed to escape, was Flavius Belisarius. This is where Belisarius is noticed and the next year promoted to be the commander of all the Roman troops in the east even though he is very young (about 30 at this point). In this article, i plan on highlighting key events in the battles and life of Belisarius and thus imply how luck is a very real thing and all great generals in history had plenty of it. 
