@@ -23,10 +23,13 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
-  {% if page.extra.image %}
-    <img src="{{ page.extra.image }}" alt="{{ page.title }}" class="article-image"> 
-  {% endif %}
-
+{% if page.extra.images %}
+  <div class="image-gallery">
+    {% for img in page.extra.images %}
+      <img src="{{ get_url(path=img) }}" alt="{{ page.title }}" class="gallery-image">
+    {% endfor %}
+  </div>
+{% endif %}
 
   
   {{ page.content | safe }}
