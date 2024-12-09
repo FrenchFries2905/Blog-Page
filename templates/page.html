@@ -21,18 +21,20 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
- {% if page.extra.image %}
-  {% if page.extra.image is string %}
-  
-    <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
-  {% elif page.extra.image is array %}
-  
-    {% for image in page.extra.image %}
-      <img src="{{ get_url(path=image) | safe }}" alt="{{ page.title }}" class="article-image">
-    {% endfor %}
-  {% endif %}
-{% endif %}
-
+ {% block ogimage -%}
+  {%- if page.extra.image %}
+    {% if page.extra.image is string %}
+      <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
+    {% elif page.extra.image is array %}
+      {% for image in page.extra.image %}
+        <img src="{{ get_url(path=image) | safe }}" alt="{{ page.title }}" class="article-image">
+      {% endfor %}
+    {% endif %}
+  {%- else %}
+    <!-- Fallback to a default image if none is provided -->
+    <img src="{{ get_url(path='/images/default.jpg') | safe }}" alt="Default Image" class="article-image">
+  {%- endif -%}
+{% endblock ogimage %}
 
 
   
