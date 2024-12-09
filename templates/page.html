@@ -7,9 +7,11 @@
 {% block ogdesc %}{{ page.description }}{% endblock ogdesc %}
 {% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl%}
 {% block ogimage -%}
-  {%- if page.extra.image -%}{{ get_url(path=page.extra.image) | safe }}
-  {%- elif config.extra.ogimage -%}{{ get_url(path=config.extra.ogimage) | safe }}
-  {%- endif -%}
+  {% if page.extra.image %}
+    {{ get_url(path=page.extra.image) | safe }}
+  {% elif config.extra.ogimage %}
+    {{ get_url(path=config.extra.ogimage) | safe }}
+  {% endif %}
 {%- endblock ogimage %}
 
 
