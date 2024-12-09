@@ -7,20 +7,16 @@
 {% block ogdesc %}{{ page.description }}{% endblock ogdesc %}
 {% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl%}
 {% block ogimage -%}
-  {%- if page.extra.image %}
+  {%- if page.extra.image -%}
     {% if page.extra.image is string %}
-      <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
+      {{ get_url(path=page.extra.image) | safe }}
     {% elif page.extra.image is array %}
-      {% for image in page.extra.image %}
-        <img src="{{ get_url(path=image) | safe }}" alt="{{ page.title }}" class="article-image">
-      {% endfor %}
+      {{ get_url(path=page.extra.image[0]) | safe }}  <!-- Use the first image for OG image -->
     {% endif %}
-  {%- else %}
-    <!-- Fallback to a default image if none is provided -->
-    <img src="{{ get_url(path='/images/default.jpg') | safe }}" alt="Default Image" class="article-image">
-  {%- endif -%}
-{% endblock ogimage %}
-
+  {%- elif config.extra.ogimage -%}
+    {{ get_url(path=config.extra.ogimage) | safe }}
+  {%- endif %}
+{%- endblock ogimage %}
 
 {% block content %}
 <article>
@@ -30,7 +26,7 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
- {% if page.extra.image %}
+  {% if page.extra.image %}
     {% if page.extra.image is string %}
       <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
     {% elif page.extra.image is array %}
@@ -40,24 +36,23 @@
     {% endif %}
   {% endif %}
 
-
-  
   {{ page.content | safe }}
 </article>
-  <script src="https://giscus.app/client.js"
-        data-repo="FrenchFries2905/Blog-Page"
-        data-repo-id="R_kgDONVg_3w"
-        data-category="General"
-        data-category-id="DIC_kwDONVg_384Ck2Wr"
-        data-mapping="title"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark_protanopia"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
+
+<script src="https://giscus.app/client.js"
+  data-repo="FrenchFries2905/Blog-Page"
+  data-repo-id="R_kgDONVg_3w"
+  data-category="General"
+  data-category-id="DIC_kwDONVg_384Ck2Wr"
+  data-mapping="title"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="bottom"
+  data-theme="dark_protanopia"
+  data-lang="en"
+  crossorigin="anonymous"
+  async>
 </script>
 
 {% endblock content %}
