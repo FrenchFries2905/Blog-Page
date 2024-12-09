@@ -8,7 +8,13 @@
 {% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl %}
 {% block ogimage %}
   {% if page.extra.image %}
-    {{ get_url(path=page.extra.image) | safe }}
+    {% if page.extra.image is iterable %}
+      {% for image in page.extra.image %}
+        {{ get_url(path=image) | safe }}
+      {% endfor %}
+    {% else %}
+      {{ get_url(path=page.extra.image) | safe }}
+    {% endif %}
   {% elif config.extra.ogimage %}
     {{ get_url(path=config.extra.ogimage) | safe }}
   {% endif %}
@@ -23,15 +29,15 @@
   {% endif %}
 
   {% if page.extra.image %}
-    {% if page.extra.image is string %}
-      <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
-    {% elif page.extra.image is array %}
+    {% if page.extra.image is iterable %}
       {% for image in page.extra.image %}
         <img src="{{ get_url(path=image) | safe }}" alt="{{ page.title }}" class="article-image">
       {% endfor %}
+    {% else %}
+      <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
     {% endif %}
   {% endif %}
-  
+
   {{ page.content | safe }}
 </article>
 
