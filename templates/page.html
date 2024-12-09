@@ -7,11 +7,9 @@
 {% block ogdesc %}{{ page.description }}{% endblock ogdesc %}
 {% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl%}
 {% block ogimage -%}
-  {% if page.extra.image %}
-    {{ get_url(path=page.extra.image) | safe }}
-  {% elif config.extra.ogimage %}
-    {{ get_url(path=config.extra.ogimage) | safe }}
-  {% endif %}
+  {%- if page.extra.image -%}{{ get_url(path=page.extra.image) | safe }}
+  {%- elif config.extra.ogimage -%}{{ get_url(path=config.extra.ogimage) | safe }}
+  {%- endif -%}
 {%- endblock ogimage %}
 
 
@@ -23,13 +21,10 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
-{% if page.extra.images %}
-  <div class="image-gallery">
-    {% for img in page.extra.images %}
-      <img src="{{ get_url(path=img) }}" alt="{{ page.title }}" class="gallery-image">
-    {% endfor %}
-  </div>
-{% endif %}
+  {% if page.extra.image %}
+    <img src="{{ page.extra.image }}" alt="{{ page.title }}" class="article-image"> 
+  {% endif %}
+
 
   
   {{ page.content | safe }}
