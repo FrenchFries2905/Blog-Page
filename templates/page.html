@@ -29,15 +29,15 @@
   {% endif %}
 
   {% if page.extra.image %}
-    {% if page.extra.image is iterable %}
-      <div class="article-images">
+    <div class="article-images">
+      {% if page.extra.image is iterable %}
         {% for image in page.extra.image %}
           <img src="{{ get_url(path=image) | safe }}" alt="{{ page.title }}" class="article-image">
         {% endfor %}
-      </div>
-    {% else %}
-      <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
-    {% endif %}
+      {% else %}
+        <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
+      {% endif %}
+    </div>
   {% endif %}
 
   {{ page.content | safe }}
