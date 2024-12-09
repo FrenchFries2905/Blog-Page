@@ -1,6 +1,6 @@
 +++
 title="Nenets of the Tundra"
-date="2024-12-03"
+date="2024-12-03 12:00:00"
 extra.image=["/Blog-Page/nenet1.jpg","/Blog-Page/nenet2.jpg","/Blog-Page/nenet3.png","/Blog-Page/nenet4.jpg", "/Blog-Page/nenet5.jpg", "/Blog-Page/nenet6.jpg"]
 +++
 ![A Nenet speaks about his lifestyle](/Blog-Page/nenet6.jpg)
