@@ -21,9 +21,10 @@
     <p style="font-size:90%;">Posted on <time datetime="{{ page.date | date(format="%+") }}">{{ page.date | date(format="%B %d, %Y") }}</time></p>
   {% endif %}
 
-{% if page.extra.image %}
-  <img src="{{ get_url(path=page.extra.image) | safe }}" alt="{{ page.title }}" class="article-image">
-{% endif %}
+  {% if page.extra.image %}
+    <img src="{{ page.extra.image }}" alt="{{ page.title }}" class="article-image"> 
+  {% endif %}
+
 
   
   {{ page.content | safe }}
