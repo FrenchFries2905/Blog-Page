@@ -7,15 +7,11 @@
 {% block ogdesc %}{{ page.description }}{% endblock ogdesc %}
 {% block ogurl %}{{ page.permalink | safe }}{% endblock ogurl %}
 {% block ogimage %}
-  {%- if page.extra.image %}
-    {% if page.extra.image is string %}
-      {{ get_url(path=page.extra.image) | safe }}
-    {% elif page.extra.image is iterable %}
-      {{ get_url(path=page.extra.image[0]) | safe }}  <!-- Use the first image for OG image -->
-    {% endif %}
-  {%- elif config.extra.ogimage %}
+  {% if page.extra.image %}
+    {{ get_url(path=page.extra.image) | safe }}
+  {% elif config.extra.ogimage %}
     {{ get_url(path=config.extra.ogimage) | safe }}
-  {%- endif %}
+  {% endif %}
 {% endblock ogimage %}
 
 {% block content %}
@@ -38,23 +34,22 @@
   
   {{ page.content | safe }}
 </article>
-{% endblock content %}
 
-
+<!-- Giscus Commenting System -->
 <script src="https://giscus.app/client.js"
-  data-repo="FrenchFries2905/Blog-Page"
-  data-repo-id="R_kgDONVg_3w"
-  data-category="General"
-  data-category-id="DIC_kwDONVg_384Ck2Wr"
-  data-mapping="title"
-  data-strict="0"
-  data-reactions-enabled="1"
-  data-emit-metadata="0"
-  data-input-position="bottom"
-  data-theme="dark_protanopia"
-  data-lang="en"
-  crossorigin="anonymous"
-  async>
+        data-repo="FrenchFries2905/Blog-Page"
+        data-repo-id="R_kgDONVg_3w"
+        data-category="General"
+        data-category-id="DIC_kwDONVg_384Ck2Wr"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="dark_protanopia"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
 </script>
 
 {% endblock content %}
