@@ -157,3 +157,20 @@ td {
     align-items: flex-start;
   }
 }
+main img,
+article img,
+.post-content img,
+.content img,
+figure img {
+  max-width: 100% !important;
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+figure,
+.post-content,
+.content {
+  max-width: 100%;
+  overflow: hidden;
+}
