@@ -1,70 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap');
+
 :root {
-  --bg-main: #0a0a0f;
-  --bg-secondary: #11131a;
-  --glass-bg: rgba(0, 255, 140, 0.05);
+  --bg-main: #0f0d0a;
+  --bg-secondary: #13110e;
+  --glass-bg: rgba(196, 160, 90, 0.04);
+  --text-primary: #f0e8d0;
+  --text-muted: #b8a882;
+  --accent: #c4a05a;
+  --accent-soft: #a07d3e;
+  --accent-glow: rgba(196, 160, 90, 0.35);
+  --border: rgba(196, 160, 90, 0.18);
+  --radius: 10px;
+  --shadow: 0 2px 24px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(196, 160, 90, 0.08);
 
-  --text-primary: #eafff5;
-  --text-muted: #7affc4;
-
-  --accent: #00ff9c;
-  --accent-soft: #00cc7a;
-  --accent-glow: rgba(0, 255, 156, 0.6);
-
-  --border: rgba(0, 255, 156, 0.2);
-
-  --radius: 14px;
-  --shadow: 0 0 25px rgba(0, 255, 156, 0.15);
+  /* Classical typography scale */
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
 }
 
-/* Global box sizing fix */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  transition: all 0.25s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  /* Removed 'all' — prevents jank on layout properties */
 }
 
-/* Base */
-html,
-body {
+html, body {
   margin: 0;
   padding: 0;
-  background: radial-gradient(circle at top, #0f1720, var(--bg-main));
+  background: radial-gradient(ellipse at top, #1c1610, var(--bg-main));
   color: var(--text-primary);
-  font: 18px/1.6 "Inter", system-ui, sans-serif;
+  font: 18px/1.75 var(--font-sans);
   min-height: 100vh;
 }
 
-/* Subtle glow overlay */
+/* Warm parchment vignette instead of neon glow */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(0,255,156,0.08), transparent 40%);
+  background: radial-gradient(ellipse at 15% 10%, rgba(196, 160, 90, 0.05), transparent 50%);
   pointer-events: none;
 }
+
+/* Headings — classical serif */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
 
 /* Links */
 a {
   color: var(--accent);
   text-decoration: none;
   position: relative;
+  letter-spacing: 0.01em;
 }
 
 a:hover {
-  text-shadow: 0 0 8px var(--accent-glow);
+  color: #e8c87a;
 }
 
 a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -2px;
   width: 0%;
-  height: 2px;
+  height: 1px;
   background: var(--accent);
-  box-shadow: 0 0 10px var(--accent);
-  transition: width 0.3s ease;
+  opacity: 0.7;
+  transition: width 0.35s ease;
 }
 
 a:hover::after {
@@ -73,35 +87,42 @@ a:hover::after {
 
 /* Main container */
 main {
-  margin: 3rem auto;
+  margin: 3.5rem auto;
   max-width: 42rem;
   width: 100%;
-  padding: 1.8rem;
-
+  padding: 2.2rem 2.5rem;
   background: var(--bg-secondary);
   border-radius: var(--radius);
-
-  border: 1px solid var(--border);
+  border: 0.5px solid var(--border);
   box-shadow: var(--shadow);
 }
 
-/* Fix text/content overflow */
+/* Classical horizontal rule accent */
+main > h1:first-child::after,
+main > h2:first-child::after {
+  content: "";
+  display: block;
+  width: 3rem;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.6;
+  margin-top: 0.6rem;
+}
+
 main, article, div {
   overflow-wrap: break-word;
 }
 
-/* Images (FIXED RESPONSIVE) */
 img {
   max-width: 100%;
   height: auto;
   display: block;
   min-width: 0;
-
   border-radius: var(--radius);
-  box-shadow: 0 0 20px rgba(0, 255, 156, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(196, 160, 90, 0.1);
 }
 
-/* Homepage list */
+/* Homepage list — parchment card feel */
 .homepage-list {
   list-style: none;
   padding: 1rem 0;
@@ -112,65 +133,84 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--border);
+  background: rgba(196, 160, 90, 0.03);
+  border: 0.5px solid var(--border);
   border-radius: var(--radius);
-
-  padding: 1rem;
-  margin-bottom: 12px;
-
-  backdrop-filter: blur(8px);
+  padding: 1.1rem 1.3rem;
+  margin-bottom: 10px;
+  backdrop-filter: blur(6px);
 }
 
 .homepage-list li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px var(--accent-glow);
+  transform: translateY(-2px);
+  border-color: rgba(196, 160, 90, 0.38);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
 }
 
-/* Code blocks */
+/* Code blocks — inkwell dark */
 pre {
-  background: #050607;
-  border: 1px solid var(--border);
+  background: #090806;
+  border: 0.5px solid var(--border);
   border-radius: var(--radius);
-  padding: 1rem;
-  color: #b6ffe2;
+  border-left: 2px solid var(--accent);
+  padding: 1.2rem 1.4rem;
+  color: #d4c49a;
+  font-family: 'Fira Code', 'Cascadia Code', monospace;
   overflow-x: auto;
-  box-shadow: inset 0 0 15px rgba(0, 255, 156, 0.1);
+  font-size: 0.9rem;
+}
+
+/* Blockquote — classical pull-quote */
+blockquote {
+  border-left: 2px solid var(--accent);
+  margin: 1.8rem 0;
+  padding: 0.6rem 0 0.6rem 1.5rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--text-muted);
+  font-size: 1.1rem;
 }
 
 /* Tables */
-td {
-  border: 1px solid var(--border);
-  padding: 10px;
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 0.5px solid var(--border);
+  padding: 10px 14px;
+}
+
+th {
+  font-family: var(--font-serif);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
 }
 
 /* Mobile */
 @media (max-width: 38rem) {
   main {
     margin: 1rem;
-    padding: 1rem;
+    padding: 1.2rem 1.3rem;
   }
-
   .homepage-list li {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-main img,
-article img,
-.post-content img,
-.content img,
-figure img {
+
+main img, article img, .post-content img, .content img, figure img {
   max-width: 100% !important;
   width: 100% !important;
   height: auto !important;
   display: block;
 }
 
-figure,
-.post-content,
-.content {
+figure, .post-content, .content {
   max-width: 100%;
   overflow: hidden;
 }
