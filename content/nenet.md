@@ -1,9 +1,8 @@
 +++
 title="Nenets of the Tundra"
 date="2024-12-03 12:00:00"
-extra.image=["/Blog-Page/nenet1.jpg","/Blog-Page/nenet2.jpg","/Blog-Page/nenet3.png","/Blog-Page/nenet4.jpg", "/Blog-Page/nenet5.jpg", "/Blog-Page/nenet6.jpg"]
 +++
-![A Nenet speaks about his lifestyle](/Blog-Page/nenet6.jpg)
+
 
 Nenets are nomadic indigenous people of Siberia. Numbered less than 50 thousand today, they are a very reserved ethnic group that has no interest in leaving their lifestyle and integrate into the modern world. The live in the tundra and taiga of northern Russia, mostly around the Yamal peninsula. Their regions are intersected by major rivers like the Ob and Pechora and bordered by Arctic seas. This gives them the opportunity for fishing and hunting and also provides the source of fresh water. They practice animism and shamanism, believing in spirits of nature, ancestors, resources of land and land it self. 
 

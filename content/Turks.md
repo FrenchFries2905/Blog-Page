@@ -1,7 +1,7 @@
 +++
 title="Turkic and Mongolic Cultural Assimilation"
 date="2025-04-05"
-extra.image=["/Blog-Page/yuan.jpg","/Blog-Page/mughal.jpg","/Blog-Page/seljuk.jpg","/Blog-Page/goldenhorde.jpg"]
+
 +++
 The Turkic and Mongolic peoples, known more for their horseback warfare and tribal councils than for courtly rituals, ended up ruling vast and ancient civilizations like China, India, Persia, and parts of Eastern Europe. But instead of imposing their own nomadic ways on these lands, they often ended up adopting the local cultures—especially when it came to how they ruled. From clothing and architecture to government structures and court ceremonies, these conquerors didn’t just take over—they blended in and reinvented themselves. Let’s start with Kublai Khan in China.
 ![](/Blog-Page/yuan.jpg)
