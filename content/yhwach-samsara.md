@@ -4,9 +4,9 @@ date="2026-11-16 12:00:00"
 +++
 
 
-*Savior or harbinger of oblivion?*
+## Savior or harbinger of oblivion?
 
-![](/Blog-Page/cycle.png)
+![](/Blog-Page/static/cycle.png)
 
 A bodhisattva (a being who delays their own nirvana to free all others) begins with a vow: no one should be left behind. Yhwach begins the same way. Born from a mother who died while he was still in the womb, he builds his entire ambition on one wound: the fear of death. His promise is a world where no one has to feel it. On the surface, this is the bodhisattva ideal. In practice, it is a dark mirror of it.
 
@@ -14,7 +14,7 @@ A bodhisattva vows to free all sentient beings, and Yhwach aims to unite the Sou
 
 Yhwach's ambition bears a striking resemblance to this aspiration, although his understanding of liberation is fundamentally different. He does not seek to teach humanity how to transcend suffering; he seeks to eliminate the conditions that make suffering possible. Both accept enormous personal cost. Yhwach knows he will be hated for it and his burden of fear increases with every soul that returns to him as he works to end the cycle of life and death. As the Father of all Quincies, he receives the souls of those who die, and the accumulation of these souls can be interpreted as an ever growing weight of existence that he carries. His desire to abolish death is therefore not simply an ambition for dominion, but can also be understood as an attempt to end a cycle whose consequences he continually experiences.
 
-![](/Blog-Page/cry.jpg)
+![](/Blog-Page/static/cry.jpg)
 
 This is where the motives between Yhwach and a bodhisattva differ. Karuna, the compassion that responds to the suffering of others, is what drives a bodhisattva. Yhwach is driven by klesa, the mental afflictions, such as craving, fear, and aversion, that keep beings trapped. Yhwach sees death and the fear of death as the fundamental source of suffering. The Bodhisattva accepts suffering without seeking to impose permanence upon the universe; their compassion arises from understanding impermanence and overcoming attachment. Yhwach, however, seeks to end suffering by eliminating impermanence itself. He accepts being hated, feared and ultimately opposed, but cannot accept the fundamental uncertainty of existence. His sacrifice is therefore both an expression of compassion and an extension of his attachment.
 
